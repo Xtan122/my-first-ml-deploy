@@ -17,7 +17,7 @@ if st.button('Predict'):
     try:
         data = [[hours]]
         scaled_data = scaler.transform(data)
-        prediction = model.predict(scaled_data)
+        prediction = model.predict(scaled_data)[0]
 
         st.success(f"Predicted Test Score: {prediction[0]:.2f}")
 
